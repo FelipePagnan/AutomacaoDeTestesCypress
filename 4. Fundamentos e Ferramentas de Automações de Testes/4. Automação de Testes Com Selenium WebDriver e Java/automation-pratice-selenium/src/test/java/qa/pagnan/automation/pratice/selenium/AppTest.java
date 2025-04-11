@@ -15,7 +15,7 @@ public class AppTest {
         //https://www.selenium.dev/documentation/web/driver/getting_started/install_drivers/
     	System.getProperty("webdriver.chrome.driver", "drivers/chromedriver");
     	driver = new ChromeDriver();
-    	//driver.manage().window().maximize();
+    	driver.manage().window().maximize();
     	driver.get("https://www.linkedin.com/in/felipepagnan/");
     	
     	String currentUrl = driver.getCurrentUrl();
@@ -23,7 +23,7 @@ public class AppTest {
     	
     	Assertions.assertEquals(expected, currentUrl);
     	
-    	//driver.quit();
+    	driver.quit();
     	
     }
     @Test
