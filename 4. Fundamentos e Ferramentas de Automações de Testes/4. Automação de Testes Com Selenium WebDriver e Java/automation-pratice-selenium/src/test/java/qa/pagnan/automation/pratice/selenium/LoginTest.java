@@ -19,8 +19,7 @@ class LoginTest {
     	System.getProperty("webdriver.chrome.driver", "drivers/chromedriver");
     	driver = new ChromeDriver();
     	driver.manage().window().maximize();
-    	driver.get("https://www.linkedin.com/login/");
-		
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 	}
 
 	@AfterEach
@@ -31,21 +30,21 @@ class LoginTest {
 	@Test
 	void test() {
 		//Pesquisa por Id
-		WebElement fieldEmail = driver.findElement(By.id("username"));
-		fieldEmail.sendKeys("AQUIVAIOEMAIL");
+		WebElement emailAddressElement = driver.findElement(By.id("email"));
+		emailAddressElement.sendKeys("camilajavadev123@gmail.com");
 		
 		//Pesquisa por Name
-		WebElement fieldPassword = driver.findElement(By.name("session_password"));
-		fieldPassword.sendKeys("AQUIVAIASENHA");
+		WebElement passwordElement = driver.findElement(By.name("passwd"));
+		passwordElement.sendKeys("123456@Ca");
 		
 		//Pesquisa por XPath
-		WebElement fieldLogin = driver.findElement(By.xpath("//*[@id=\"organic-div\"]/form/div[4]/button"));
-		fieldLogin.click();
+		WebElement submitBtnElement = driver.findElement(By.xpath("//*[@ID=\"SubmitLogin\"]"));
+		submitBtnElement.click();
 		
-		WebElement tagLogin = driver.findElement(By.tagName("h1"));
-		String textTagH1 = tagLogin.getText();
+		WebElement tagMyAccount = driver.findElement(By.tagName("h1"));
+		String textTagH1 = tagMyAccount.getText();
 		
-		Assertions.assertTrue(textTagH1.equals("atualizações do feed"));
+		Assertions.assertTrue(textTagH1.equals("MY ACCOUNT"));
 		
 	}
 
