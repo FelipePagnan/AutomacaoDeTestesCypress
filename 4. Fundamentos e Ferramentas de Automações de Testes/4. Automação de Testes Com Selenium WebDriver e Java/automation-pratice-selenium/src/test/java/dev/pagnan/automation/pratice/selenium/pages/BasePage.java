@@ -1,4 +1,4 @@
-package dev.camila.automation.pratice.selenium.pages;
+package dev.pagnan.automation.pratice.selenium.pages;
 
 import java.time.Duration;
 

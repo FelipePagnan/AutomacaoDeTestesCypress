@@ -1,4 +1,4 @@
-package dev.camila.automation.pratice.selenium.tests;
+package dev.pagnan.automation.pratice.selenium.tests;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;

@@ -1,4 +1,4 @@
-package dev.camila.automation.pratice.selenium;
+package dev.pagnan.automation.pratice.selenium;
 
 public class App {
     
