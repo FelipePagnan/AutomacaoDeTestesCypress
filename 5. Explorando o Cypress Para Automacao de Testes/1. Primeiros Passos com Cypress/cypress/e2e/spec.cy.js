@@ -14,7 +14,7 @@ describe('Apendendo conceitos Cypress', () => {
 
     cy.contains('Your mail or password is incorrect!');
   })
-  
+  */
   it('2 - Acessando home da pagina Automation Exercise', () => {
     cy.visit('/');
     cy.contains('Automation');
@@ -36,7 +36,7 @@ describe('Apendendo conceitos Cypress', () => {
     
     cy.get('[data-product-id="2"]') // pelo data-id
   })
-  */
+  
 
   it('4 - Colocar item no carrinho e continuar comprando', () =>{
     cy.visit('/');
